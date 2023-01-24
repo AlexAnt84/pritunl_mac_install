@@ -79,7 +79,7 @@ fi
 
 #Чекаем Wireguard
 NEED_RESTART=0
-$HMBR_PREFIX/bin/brew list | grep wireguard-tools > /dev/null
+$HMBR_PREFIX/bin/brew list | grep -i wireguard-tools > /dev/null
 if [[ $? != "0" ]]
 then
   wireguard_install
@@ -88,7 +88,7 @@ else
 fi
 
 #Чекаем притунл
-$HMBR_PREFIX/bin/brew list | grep pritunl > /dev/null
+$HMBR_PREFIX/bin/brew list | grep -i pritunl > /dev/null
 if [[ $? != "0" ]]
 then
   pritunl_install
